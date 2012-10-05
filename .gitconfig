@@ -1,0 +1,64 @@
+[user]
+	name = Chris Eich
+	email = ceich@trinnovations.com
+[color]
+	ui = auto
+	status = auto
+	branch = auto
+[diff]
+	renames = copies
+	mnemonicprefix = true
+	external = p4diff
+[branch]
+	autoSetupMerge = true
+[rerere]
+	enabled = true
+[merge]
+	stat = true
+	keepBackup = false;
+	tool = p4merge
+
+[core]
+	whitespace = trailing-space,space-before-tab
+	excludesfile = /home/ceich/.gitignore_global
+	autocrlf = true
+[alias]
+  co = checkout
+  ci = commit
+  st = status
+  br = branch
+  hist = log --pretty=format:\"%h %ad | %s%d [%an]\" --graph --date=short
+  type = cat-file -t
+  dump = cat-file -p
+  dc = diff --cached
+  lg = log -p
+  lol = log --graph --decorate --pretty=oneline --abbrev-commit
+  lola = log --graph --decorate --pretty=oneline --abbrev-commit --all
+  ls = ls-files
+
+  # Show files ignored by git:
+  ign = ls-files -o -i --exclude-standard
+	mod-files = !git diff --name-status $(git merge-base origin/master HEAD)
+	modified = !git diff --name-status $(git merge-base origin/master HEAD)
+	mod = !git diff --name-only $(git merge-base origin/master HEAD)
+
+[push]
+	default = tracking
+[color "branch"]
+    current = yellow reverse
+    local = yellow
+    remote = green
+
+[color "diff"]
+    meta = yellow bold
+    frag = magenta bold
+    old = red bold
+    new = green bold
+
+[color "status"]
+    added = yellow
+    changed = green
+    untracked = cyan
+
+[apply]
+	whitespace = nowarn
