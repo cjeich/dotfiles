@@ -2,4 +2,7 @@
 .idea/*
 .svn
 *~
+.DS_Store
+*.komodo*
+*.un~
 
