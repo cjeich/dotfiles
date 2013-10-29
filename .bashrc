@@ -187,43 +187,7 @@ alias la='ls -a'
 alias df='df -h'
 alias aka='cat ~/.bashrc | grep alias'
 alias ipconfig='ifconfig'
-#alias sfl='cd /var/www/vhosts/seniorsforliving.com/httpdocs'
-alias seniorsforliving='cd /var/www/vhosts/seniorsforliving.com/httpdocs'
-alias seniors='cd /var/www/vhosts/seniorsforliving.com/httpdocs'
-alias jason='ssh ceich@10.10.0.7'
-alias freddy='ssh ceich@10.10.0.6'
-alias pinhead='ssh ceich@pinhead'
-alias trinnqa='ssh ceich@freddy'
-alias tqa='ssh ceich@freddy'
-alias svnt='svntool'
-alias svt='svntool'
 
-alias 8085='cd ~/freddy/8085_data/httpd/html'
-alias 8084='cd ~/freddy/8084_data/httpd/html'
-alias 8083='cd ~/freddy/8083_data/httpd/html'
-alias 8082='cd ~/freddy/8082_data/httpd/html'
-alias 8081='cd ~/freddy/8081_data/httpd/html'
-alias 8080='cd ~/freddy/8080_data/httpd/html'
-alias 8086='cd ~/freddy/8086_data/httpd/html'
-alias 8087='cd ~/freddy/8087_data/httpd/html'
-alias 8088='cd ~/freddy/8088_data/httpd/html'
-alias 8089='cd ~/freddy/8089_data/httpd/html'
-alias 9000='cd ~/freddy/9000_data/httpd/html'
-alias 9001='cd ~/freddy/9001_data/httpd/html'
-alias 9002='cd ~/freddy/9002_data/httpd/html'
-alias 9003='cd ~/freddy/9003_data/httpd/html'
-
-alias co="checkout.php -Vf"
-alias checkout="checkout.php -Vf"
-alias csurfing="cd /data/httpd/html/csurfing"
-alias callcenter="cd /data/httpd/html/callcenter"
-alias cc="cd /data/httpd/html/callcenter"
-alias html="cd /data/httpd/html"
-alias ftrj="cd /data/httpd/html/findtherightjob/"
-alias cba="cd /data/httpd/html/collegeboundadvisor/"
-alias cbnet="cd /data/httpd/html/cbnet"
-alias myeducation="cd /data/httpd/html/myeducation"
-alias ftrs="cd /data/httpd/html/findtherightscholarship"
 
 #Function to make directory and move into it
 function md () { mkdir -p "$@" && cd "$@"; }
@@ -247,6 +211,8 @@ function sfl(){
 # Fix misstyped cd commands
 alias ..="cd .."
 alias cd..="cd .."
+alias ...="cd ../.."
+alias ....="cd ../../.."
 
 # Command Completion for Bash
 complete -W "`pear 2>&1 | awk '{ORS=" "} /[a-zA-Z-]+  / {print $1}'`" -f pear
