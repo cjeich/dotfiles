@@ -8,7 +8,6 @@
 [diff]
 	renames = copies
 	mnemonicprefix = true
-	external = p4diff
 [branch]
 	autoSetupMerge = true
 [rerere]
@@ -16,12 +15,10 @@
 [merge]
 	stat = true
 	keepBackup = false;
-	tool = p4merge
 
 [core]
 	whitespace = trailing-space,space-before-tab
 	excludesfile = /home/ceich/.gitignore_global
-	autocrlf = true
 [alias]
   co = checkout
   ci = commit
